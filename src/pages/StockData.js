@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { Link } from "react-router-dom";
 
-export default function Stocks(props){
+export default function stocks(props){
 const stocks = [
     {name: "Apple Inc.", symbol: "AAPL", lastPrice: 140.64, change: -0.280000000000001, high: 141.74, low: 140.35, open: 141.5},
     {name: "Microsoft Corporation", symbol: "MSFT", lastPrice: 64.98, change: 0.109999999999999, high: 65.45, low: 64.76, open: 65.12},
@@ -14,8 +14,8 @@ const stocks = [
 
 return (
   <div className="stocks">
-    {stocks.map((coin) => {
-      const { name, symbol } = coin;
+    {stocks.map((stock) => {
+      const { name, symbol } = stock;
 
       return (
         <Link to={`/price/${symbol}`}>
