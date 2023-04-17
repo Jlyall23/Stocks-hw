@@ -1,25 +1,26 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route} from 'react-router-dom';
+import { Routes} from 'react-router-dom'
 import Dashboard from './Dashboard';
 import About from '../pages/About';
 import Stock from '../pages/Stocks';
-import stocks from '../pages/Stock-Data';
+import stocks from '../pages/StockData';
+import Home from '../pages/Home';
 
 function Main(props) {
   return (
     <main>
-       <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
-          <Route
-            path="/stocks/:symbol"
-            render={props => <Stock stockData={stockData} {...props} />}
-          /> 
-          <Route
-            path="/stocks"
-            render={props => <Dashboard {...props} StockData={stockData} />}
+       <Routes>
+          <Route  exact path="/" element={<Home/>} />
+          <Route path="/About" element={<About/>} />
+          <Route path="/stocks" element={<Stock/>}
+          render={props => <Dashboard {...props} StockData={stocks} />}
           />
-      </Switch>
+            { <Route
+              path="/stocks/:symbol"
+              render={props => <Stock Stocks={stocks} {...props} />}
+            />  }
+      </Routes>
     </main>
   );
 }
