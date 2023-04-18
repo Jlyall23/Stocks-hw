@@ -1,19 +1,21 @@
-ul{
+.nav{
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: darkblue;
+  background-color: dodgerblue;
 }
-li{
+.navItem{
+  
   float: left;
-}
-li a{
   display: block;
   color: white;
   text-align: center;
   padding: 14px 16px;
 }
-li a:hover{
+.navWords{
+  color: white;
+}
+.navItem:hover{
   background-color: red;
 }

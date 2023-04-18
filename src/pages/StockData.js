@@ -2,6 +2,7 @@ import { Component } from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
+
 export default function stocks(props){
 const stocks = [
     { name: "Apple Inc.", symbol: "AAPL", lastPrice: 140.64, change: -0.280000000000001, high: 141.74, low: 140.35, open: 141.5},
@@ -19,7 +20,7 @@ return (
       const { name, symbol, lastPrice} = stock;
 
       return (
-        <Link to={`/stock/${symbol}`} onClick={clicked}>
+        <Link to={`/stock/${symbol}`}>
         
           <h2>{name}  {symbol} {lastPrice}</h2>
 

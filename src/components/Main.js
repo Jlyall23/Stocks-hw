@@ -10,7 +10,7 @@ import Home from '../pages/Home';
 
 function Main(props) {
   return (
-    <main>
+    <main id='MAIN'>
        <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/About" element={<About/>} />
