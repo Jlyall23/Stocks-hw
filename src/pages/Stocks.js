@@ -1,8 +1,10 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import stocks  from './StockData';
+
 function Stock() {
   const { symbol } = useParams();
+  console.log("Stock clicked")
   const stock = stocks.find((stock) => stock.symbol === symbol);
   return (
     <div>
