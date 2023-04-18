@@ -1,10 +1,12 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import stocks  from './StockData';
+import stocks from '../components/data';
 
 function Stock() {
   const { symbol } = useParams();
   console.log("Stock clicked")
+  console.log(symbol)
+  console.log(stocks)
   const stock = stocks.find((stock) => stock.symbol === symbol);
   return (
     <div>
@@ -17,4 +19,4 @@ function Stock() {
     </div>
   );
 }
-export default stocks
+export default Stock 

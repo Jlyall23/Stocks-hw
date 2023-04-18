@@ -1,13 +1,13 @@
-import stocks from './pages/StockData';
-import Dashboard from './components/Dashboard';
+import stocks from './pages/Dashboard';
+import Nav from './components/Nav';
 import Main from './components/Main';
-import { withRouter } from 'react-router';
+
 
 
 function App(props) {
   return (
     <div>
-      <Dashboard />
+      <Nav />
       <Main StockData={stocks} />
     </div>
   );
